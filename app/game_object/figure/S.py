@@ -1,5 +1,5 @@
-from app.coordinate import Coordinate
-from app.figure.figure_abstract import FigureAbstract
+from app.game_object.coordinate import Coordinate
+from app.game_object.figure.figure_abstract import FigureAbstract
 
 
 class S(FigureAbstract):

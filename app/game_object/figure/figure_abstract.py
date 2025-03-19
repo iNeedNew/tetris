@@ -1,7 +1,7 @@
-from abc import ABC, abstractmethod, abstractproperty
+from abc import ABC, abstractmethod
 from copy import deepcopy
 
-from app.coordinate import Coordinate
+from app.game_object.coordinate import Coordinate
 
 
 class FigureAbstract(ABC):

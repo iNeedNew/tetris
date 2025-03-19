@@ -1,5 +1,5 @@
-from app.action_field import ActionField
-from app.figure.figure_abstract import FigureAbstract
+from app.game_object.figure.figure_abstract import FigureAbstract
+from app.game_object.freeze_figure_collection import FreezeFigureCollection
 from app.setting import Setting
 
 
@@ -14,10 +14,10 @@ class Collided:
 
         return False
 
-    def figure_with_deactivate_figures(self, active_figure: FigureAbstract, deactivate_figures: list[FigureAbstract]):
-        for deactivate_figure in deactivate_figures:
-            for deactivate_coordinate in deactivate_figure.get_coordinates():
+    def figure_with_freeze_figures(self, active_figure: FigureAbstract, freeze_figure_collection: FreezeFigureCollection):
+        for freeze_figure in freeze_figure_collection.get():
+            for freeze_coordinate in freeze_figure.get_coordinates():
                 for active_coordinate in active_figure.get_coordinates():
-                    if active_coordinate == deactivate_coordinate:
+                    if active_coordinate == freeze_coordinate:
                         return True
         return False

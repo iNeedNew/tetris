@@ -1,7 +1,7 @@
 class Setting:
 
-    ACTION_FIELD_WIDTH = 6
-    ACTION_FIELD_HEIGHT = 5
+    ACTION_FIELD_WIDTH = 7
+    ACTION_FIELD_HEIGHT = 10
 
     GUI_SCALE = 100
 

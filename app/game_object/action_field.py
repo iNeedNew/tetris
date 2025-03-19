@@ -1,4 +1,4 @@
-from app.coordinate import Coordinate
+from app.game_object.coordinate import Coordinate
 from app.setting import Setting
 
 
