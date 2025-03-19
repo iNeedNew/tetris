@@ -21,4 +21,4 @@ class Coordinate:
         return False
 
     def __repr__(self):
-        return 'Coordinate({}x{})'.format(self.__x, self.__y)
+        return 'Coordinate({}, {})'.format(self.__x, self.__y)

@@ -38,3 +38,7 @@ class FreezeFigureCollection:
             for coordinate in coordinates[:]:
                 if coordinate.get_y() in layers:
                     coordinates.remove(coordinate)
+
+        for figure in self.__collection[:]:
+            if len(figure.get_coordinates()) == 0:
+                self.__collection.remove(figure)

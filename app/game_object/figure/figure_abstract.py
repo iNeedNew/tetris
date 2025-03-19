@@ -24,6 +24,14 @@ class FigureAbstract(ABC):
         self.add_position_vertical(self._position_vertical)
         self.add_position_horizontal(self._position_horizontal)
 
+        self._is_falling = True
+
+    def is_falling(self):
+        return self._is_falling
+
+    def set_is_falling(self, is_falling: bool):
+        self._is_falling = is_falling
+
     @abstractmethod
     def _init_coordinates(self) -> None:
         pass
@@ -118,25 +126,4 @@ class FigureAbstract(ABC):
 
     def __repr__(self):
         return '[{}]FigureSize({}x{})'.format(self.__class__.__name__, self.__max_side_width, self.__max_side_height)
-
-    def layer_intersects(self, layer: int):
-        for coordinate in self._coordinates:
-            if coordinate.get_y() == layer:
-                return True
-        return False
-
-    def split_by_layers(self, layers):
-
-        for layer in layers:
-            
-            up_coordinates = []
-            down_coordinates = []
-
-            for coordinate in self._coordinates:
-                if coordinate.get_y() == layer:
-                    pass
-                elif coordinate.get_y() > layer:
-                    down_coordinates.append(coordinate)
-                elif coordinate.get_y() < layer:
-                    up_coordinates.append(coordinate)
 

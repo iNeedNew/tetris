@@ -6,14 +6,14 @@ class I(FigureAbstract):
 
     def _init_position(self) -> None:
         self._position_vertical = -3
-        self._position_horizontal = 0
+        self._position_horizontal = 3
 
     def _init_coordinates(self):
         self._coordinates: list[Coordinate] = [
-            Coordinate(2, 0),
-            Coordinate(2, 1),
-            Coordinate(2, 2),
-            Coordinate(2, 3),
+            Coordinate(0, 0),
+            Coordinate(0, 1),
+            Coordinate(0, 2),
+            Coordinate(0, 3),
         ]
 
     def rotate(self):
